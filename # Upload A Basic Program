@@ -1,0 +1,11 @@
+// the setup function runs once when you press reset or power the board
+void setup() {
+pinMode(13, OUTPUT); // Set pin 13 as an output
+}
+// the loop function runs repeatedly
+void loop() {
+digitalWrite(13, HIGH); // Turn the LED on
+delay(1000); // Wait for 1 second
+digitalWrite(13, LOW); // Turn the LED off
+delay(1000); // Wait for 1 second
+}
