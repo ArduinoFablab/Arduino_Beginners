@@ -1,0 +1,27 @@
+const int LED = 13; // Define the pin for the LED
+const int BUTTON = 8; // Define the pin for the button
+int buttonState = 0; // Variable to store the button's state
+// The setup function runs once when you press reset or power the board
+void setup() {
+pinMode(LED, OUTPUT); // Set pin 13 as output for the LED
+pinMode(BUTTON, INPUT); // Set pin 8 as input for the button
+}
+// The loop function runs over and over again forever
+void loop()
+{ buttonState = digitalRead(BUTTON); // Read the state of the button
+  if (buttonState == HIGH) { // If the button is pressed
+    digitalWrite(LED, HIGH); // Turn on the LED
+    delay(100); // Wait for 100 ms
+    digitalWrite(LED, LOW); // Turn off the LED
+    delay(100); // Wait for 100 ms
+  } else { // If the button is not pressed
+    digitalWrite(LED, HIGH); // Turn on the LED
+    delay(1000); // Wait for a second
+    digitalWrite(LED, LOW); // Turn off the LED
+    delay(1000); // Wait for a second
+  }
+}
+
+
+
+
