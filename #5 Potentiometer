@@ -1,0 +1,15 @@
+const int LED = 13; // Define the pin for the LED
+const int POT = A0; // Define the analog pin for the potentiometer
+int potValue = 0; // Variable to store the potentiometer value
+void setup() {
+pinMode(LED, OUTPUT); // Set LED pin as an output
+}
+void loop() {
+potValue = analogRead(POT); // Read potentiometer value
+int delayTime = map(potValue, 0, 1023, 100, 1000); // Map the value to a delay range
+digitalWrite(LED, HIGH); // Turn on the LED
+delay(delayTime); // Wait for the mapped time
+digitalWrite(LED, LOW); // Turn off the LED
+delay(delayTime); // Wait for the mapped time
+}
+
